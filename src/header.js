@@ -7,13 +7,10 @@ class Header extends Component {
         this.state = ({ value: "" })
     }
 
-    handlechange = (event) => {
-        this.setState({ value: event.target.value })
-    }
+    handlechange = (event) => { this.setState({ value: event.target.value }) }
 
     add = () => {
-        if (this.state.value.trim() === '')
-            return {}
+        if (this.state.value.trim() === '') return {}
         else {
             this.props.addtodo(this.state.value)
             this.setState({ value: '' })
@@ -31,11 +28,7 @@ class Header extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
-        addtodo: newtext => {
-            dispatch({ type: 'ADD_TODO', newtext })
-        }
-    }
+    return { addtodo: newtext => { dispatch({ type: 'ADD_TODO', newtext }) } }
 }
 
 export default connect(null, mapDispatchToProps)(Header);

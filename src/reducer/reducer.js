@@ -4,24 +4,20 @@ let tab = [{
 },
 {
     text: 'redux',
-    isDone: false
+    isDone: true
 }]
 
-const reducertodo = (state = tab, action) => {
+const reducerToDo = (state = tab, action) => {
     switch (action.type) {
         case 'ADD_TODO':
             return [...state, { text: action.newtext }]
         case 'REMOVE_TODO':
-            return (
-                state.filter((el, index) => index !== action.cin)
-            )
+            return (state.filter((el, index) => index !== action.cin))
         case 'TOGGLE_TODO':
-            return (state.map((el, index) => (index === action.cin) ?
-                { text: el.text, isDone: !el.isDone }
-                : el))
+            return state.map((el, index) => (index === action.cin) ? { text: el.text, isDone: !el.isDone } : el)
         default:
             return state
     }
 }
 
-export default reducertodo
+export default reducerToDo

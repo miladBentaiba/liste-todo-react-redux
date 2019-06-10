@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import Itemlisttodo from './itemtodo'
+import Itemlisttodo from './itemToDo'
 
 var tab = []
 
@@ -20,6 +20,6 @@ class Listtodo extends Component {
     }
 }
 
-const mapStateToProps = (state) => { return { todo: state.reducertodo } }
+const mapStateToProps = (state) => { return { todo: state.reducerToDo } }
 
 export default connect(mapStateToProps)(Listtodo);

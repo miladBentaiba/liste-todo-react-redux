@@ -1,4 +1,5 @@
-import {combineReducers} from 'redux'
-import reducertodo from './reducer'
+import { combineReducers } from 'redux'
 
-export default combineReducers({reducertodo})
+import reducerToDo from './reducer'
+
+export default combineReducers({ reducerToDo })
