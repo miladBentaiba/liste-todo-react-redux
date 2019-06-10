@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import Itemlisttodo from './itemToDo'
-
-var tab = []
+import Itemlisttodo from './ItemToDo'
 
 class Listtodo extends Component {
     constructor(props) {
         super(props)
-        this.state = { newtab: tab }
+        this.state = { newtab: [] }
     }
 
     render() {

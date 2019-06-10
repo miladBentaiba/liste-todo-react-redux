@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import Header from './header'
-import ListToDo from './listToDo'
+import Header from './Header'
+import ListToDo from './ListToDo'
 import './App.css';
 
 export default class App extends Component {
